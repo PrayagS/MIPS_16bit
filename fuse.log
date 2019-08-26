@@ -1,0 +1,23 @@
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.exe -prj /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_beh.prj work.execution_block_tb work.glbl 
+ISim P.20131013 (signature 0xfbc00daa)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.v" into library work
+Analyzing Verilog file "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb.v" into library work
+Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Fuse Memory Usage: 82696 KB
+Fuse CPU Usage: 1120 ms
+Compiling module rsa
+Compiling module two_c
+Compiling module execution_block
+Compiling module execution_block_tb
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 5 Verilog Units
+Built simulation executable /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.exe
+Fuse Memory Usage: 1169268 KB
+Fuse CPU Usage: 1220 ms
+GCC CPU Usage: 1660 ms

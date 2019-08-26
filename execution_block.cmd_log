@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.xst" -ofn "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.syr" 

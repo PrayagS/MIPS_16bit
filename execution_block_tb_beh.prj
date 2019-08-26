@@ -1,0 +1,3 @@
+verilog work "execution_block.v"
+verilog work "execution_block_tb.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
