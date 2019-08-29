@@ -52,6 +52,8 @@
     <transform xil_pn:end_ts="1566810610" xil_pn:in_ck="2082453694390893261" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1566810610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="execution_block.v"/>
       <outfile xil_pn:name="execution_block_tb.v"/>
       <outfile xil_pn:name="rca_16bit_tb.v"/>
@@ -67,10 +69,13 @@
     <transform xil_pn:end_ts="1566810610" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="2343522466708768921" xil_pn:start_ts="1566810610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
     </transform>
     <transform xil_pn:end_ts="1566810610" xil_pn:in_ck="2082453694390893261" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1566810610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="execution_block.v"/>
       <outfile xil_pn:name="execution_block_tb.v"/>
       <outfile xil_pn:name="rca_16bit_tb.v"/>
@@ -78,7 +83,11 @@
     <transform xil_pn:end_ts="1566810616" xil_pn:in_ck="2082453694390893261" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-5417702432200899517" xil_pn:start_ts="1566810610">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="execution_block_tb_beh.prj"/>
       <outfile xil_pn:name="execution_block_tb_isim_beh.exe"/>
@@ -89,6 +98,8 @@
     <transform xil_pn:end_ts="1566810616" xil_pn:in_ck="-3006513918576997982" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="4953863610650155238" xil_pn:start_ts="1566810616">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="execution_block_tb_isim_beh.wdb"/>
@@ -105,6 +116,8 @@
     <transform xil_pn:end_ts="1566810590" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="2343522466708768921" xil_pn:start_ts="1566810590">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
     </transform>
     <transform xil_pn:end_ts="1566810590" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1566810590">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -117,15 +130,20 @@
     <transform xil_pn:end_ts="1566810590" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="3206529612922900429" xil_pn:start_ts="1566810590">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1566810590" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4503265993434504163" xil_pn:start_ts="1566810590">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1566810605" xil_pn:in_ck="-4085503875104826910" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="5362215224748759478" xil_pn:start_ts="1566810590">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="execution_block.lso"/>

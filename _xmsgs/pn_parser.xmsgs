@@ -8,13 +8,7 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb.v&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/media/DATA/Xilinx_Projects/MIPS_16bit/rca_16bit_tb.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/media/DATA/Xilinx_Projects/MIPS_16bit/program_memory.v&quot; into library work</arg>
 </msg>
 
 </messages>

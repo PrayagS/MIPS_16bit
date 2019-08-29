@@ -1,0 +1,16 @@
+# Output products list for <PMem>
+PMem/blk_mem_gen_v7_3_readme.txt
+PMem/doc/blk_mem_gen_v7_3_vinfo.html
+PMem/doc/pg058-blk-mem-gen.pdf
+PMem.asy
+PMem.gise
+PMem.mif
+PMem.ngc
+PMem.sym
+PMem.v
+PMem.veo
+PMem.xco
+PMem.xise
+PMem_flist.txt
+PMem_xmdf.tcl
+summary.log

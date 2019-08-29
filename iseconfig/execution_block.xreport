@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-08-26T14:39:37</DateModified>
+  <DateModified>2019-08-29T13:25:13</DateModified>
   <ModuleName>execution_block</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/media/DATA/Xilinx_Projects/MIPS_16bit/iseconfig/execution_block.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/media/DATA/Xilinx_Projects/MIPS_16bit</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/media/DATA/Xilinx_Projects/MIPS_16bit/</ImplementationReportsDirectory>
   <DateInitialized>2019-08-26T14:39:37</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
