@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: execution_block.prj
@@ -101,6 +101,9 @@ BRAM Utilization Ratio             : 100
 DSP48 Utilization Ratio            : 100
 Auto BRAM Packing                  : NO
 Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
 
 =========================================================================
 
@@ -493,13 +496,13 @@ clk            |    2.805|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 11.00 secs
-Total CPU time to Xst completion: 8.12 secs
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.91 secs
  
 --> 
 
 
-Total memory usage is 489248 kilobytes
+Total memory usage is 489252 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)

@@ -5,11 +5,5 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/media/DATA/Xilinx_Projects/MIPS_16bit/ipcore_dir/PMem.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">PMem</arg>&gt; remains a black box.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1127" delta="old" >"/media/DATA/Xilinx_Projects/MIPS_16bit/program_memory.v" Line 44: Assignment to <arg fmt="%s" index="1">address_carry</arg> ignored, since the identifier is never used
-</msg>
-
 </messages>
 

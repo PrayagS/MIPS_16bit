@@ -4,8 +4,8 @@
 ## - rename the used signals according to the project
 
 ## Clock signal
-NET "clk100mhz"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = clk100mhz
-NET "clk100mhz" TNM_NET = sys_clk_pin;
+NET "clk"   LOC = "E3"	| IOSTANDARD = "LVCMOS33";					#Bank = 35, Pin name = IO_L12P_T1_MRCC_35,					Sch name = clk100mhz
+NET "clk" TNM_NET = sys_clk_pin;
 TIMESPEC TS_sys_clk_pin = PERIOD sys_clk_pin 100 MHz HIGH 50%; 
 
 
@@ -39,14 +39,14 @@ NET "reset"     LOC=C12 | IOSTANDARD=LVCMOS33; #IO_L3P_T0_DQS_AD1P_15
 
 
 ## LEDs
-NET "flag_prv<0>"         LOC=H17 | IOSTANDARD=LVCMOS33; #IO_L18P_T2_A24_15
-NET "flag_prv<1>"         LOC=K15 | IOSTANDARD=LVCMOS33; #IO_L24P_T3_RS1_15
-#NET "ans_ex<0>"         LOC=J13 | IOSTANDARD=LVCMOS33; #IO_L17N_T2_A25_15
-#NET "ans_ex<1>"         LOC=N14 | IOSTANDARD=LVCMOS33; #IO_L8P_T1_D11_14
-#NET "ans_ex<2>"         LOC=R18 | IOSTANDARD=LVCMOS33; #IO_L7P_T1_D09_14
-#NET "ans_ex<3>"         LOC=V17 | IOSTANDARD=LVCMOS33; #IO_L18N_T2_A11_D27_14
-#NET "ans_ex<4>"         LOC=U17 | IOSTANDARD=LVCMOS33; #IO_L17P_T2_A14_D30_14
-#NET "ans_ex<5>"         LOC=U16 | IOSTANDARD=LVCMOS33; #IO_L18P_T2_A12_D28_14
+NET "flag_ex<0>"         LOC=H17 | IOSTANDARD=LVCMOS33; #IO_L18P_T2_A24_15
+NET "flag_ex<1>"         LOC=K15 | IOSTANDARD=LVCMOS33; #IO_L24P_T3_RS1_15
+NET "ans_ex<0>"         LOC=J13 | IOSTANDARD=LVCMOS33; #IO_L17N_T2_A25_15
+NET "ans_ex<1>"         LOC=N14 | IOSTANDARD=LVCMOS33; #IO_L8P_T1_D11_14
+NET "ans_ex<2>"         LOC=R18 | IOSTANDARD=LVCMOS33; #IO_L7P_T1_D09_14
+NET "ans_ex<3>"         LOC=V17 | IOSTANDARD=LVCMOS33; #IO_L18N_T2_A11_D27_14
+NET "ans_ex<4>"         LOC=U17 | IOSTANDARD=LVCMOS33; #IO_L17P_T2_A14_D30_14
+NET "ans_ex<5>"         LOC=U16 | IOSTANDARD=LVCMOS33; #IO_L18P_T2_A12_D28_14
 #NET "led<8>"         LOC=V16 | IOSTANDARD=LVCMOS33; #IO_L16N_T2_A15_D31_14
 #NET "led<9>"         LOC=T15 | IOSTANDARD=LVCMOS33; #IO_L14N_T2_SRCC_14
 #NET "led<10>"        LOC=U14 | IOSTANDARD=LVCMOS33; #IO_L22P_T3_A05_D21_14
