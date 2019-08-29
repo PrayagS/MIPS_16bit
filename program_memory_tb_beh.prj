@@ -1,4 +1,0 @@
-verilog work "ipcore_dir/PMem.v"
-verilog work "program_memory.v"
-verilog work "program_memory_tb.v"
-verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
