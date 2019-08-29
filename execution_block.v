@@ -105,7 +105,7 @@ assign overflow = ((op_dec == ADD  || op_dec == ADI ) && (A[15] == B[15]) && (an
                 : ((op_dec == SUB || op_dec== SBI) && (A[15] == ans_two_c) && (ans_tmp[15] != A[15])) ? 1'b1
                 : (~(op_dec == ADD || op_dec == SUB || op_dec == ADI || op_dec == SBI || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b0 : 1'b0;
 
-assign zero = ((ans_tmp == 16'b0000000000000000) && ~((op_dec == RET) || (op_dec == HLT) 
+assign zero = ((ans_tmp == 16'b0) && ~((op_dec == RET) || (op_dec == HLT) 
 	|| (op_dec == LD) || (op_dec == ST) || (op_dec == OUT) || (op_dec == JMP) || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b1
             : ((op_dec == RET) || (op_dec == HLT) ||  (op_dec == LD) || (op_dec == ST) || (op_dec == OUT) || (op_dec == JMP)) ? 1'b0 : 1'b0;
 
