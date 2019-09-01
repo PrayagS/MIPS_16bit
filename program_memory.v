@@ -27,7 +27,7 @@ input [15:0] jmp_loc;
 input pc_mux_sel, stall, stall_pm, reset, clk;
 
 reg [15:0] next_address, hold_address;
-wire address_carry;
+wire address_carry; // carry wire in case it is generated while incrementing the address
 wire [31:0] ins_pm;
 reg [31:0] ins_prv;
 wire [31:0] PM_out;
@@ -41,7 +41,7 @@ PMem program_mem_block (
 
 assign CAJ = (stall == 1'b1) ? hold_address : next_address;
 assign CAR = (pc_mux_sel == 1'b1) ? jmp_loc : CAJ;
-assign {address_carry, IA} = current_address + 1;
+assign {address_carry, IA} = current_address + 1; // Concantenation to store carry in address_carry if generated
 assign current_address = (reset == 1'b1) ? CAR : 16'b0;
 
 assign ins_pm = (stall_pm == 1'b1) ? ins_prv : PM_out;
@@ -63,18 +63,4 @@ begin
 	end
 end
 
-//always @(posedge clk)
-//begin
-//	if (reset == 1'b0)
-//	begin
-//		hold_address <= 16'b0;
-//		next_address <= 16'b0;
-//	end
-//	else
-//	begin
-//		hold_address <= current_address;
-//		next_address <= IA;
-//	end
-//end
-//
 endmodule

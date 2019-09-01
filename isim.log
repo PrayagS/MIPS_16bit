@@ -1,5 +1,5 @@
 ISim log file
-Running: /media/DATA/Xilinx_Projects/MIPS_16bit/program_memory_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/DATA/Xilinx_Projects/MIPS_16bit/program_memory_tb_isim_beh.wdb 
+Running: /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -10,8 +10,5 @@ Time resolution is 1 ps
 # wave add /
 # run 1000 ns
 Simulator is doing circuit initialization process.
- Block Memory Generator CORE Generator module loading initial data...
- Block Memory Generator data initialization complete.
-Block Memory Generator CORE Generator module program_memory_tb.uut.program_mem_block.inst.\native_mem_module.blk_mem_gen_v7_3_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
 Finished circuit initialization process.
 # exit 0

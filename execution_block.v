@@ -30,32 +30,35 @@ reg [1:0] flag_prv;
 wire [15:0] ans_rsa, data_out_buff;
 wire [15:0] ans_tmp;
 
+// Opcodes defined as parameters for better readability and usability
 parameter ADD = 6'b000000;
 parameter SUB = 6'b000001;
 parameter MOV = 6'b000010;
-parameter AND = 6'b000100;
 
+parameter AND = 6'b000100;
 parameter OR  = 6'b000101;
 parameter XOR = 6'b000110;
 parameter NOT = 6'b000111;
-parameter ADI = 6'b001000;
 
+parameter ADI = 6'b001000;
 parameter SBI = 6'b001001;
 parameter MVI = 6'b001010;
+
 parameter ANI = 6'b001100;
 parameter ORI = 6'b001101;
-
 parameter XRI = 6'b001110;
 parameter NTI = 6'b001111;
+
 parameter RET = 6'b010000;
 parameter HLT = 6'b010001;
 
 parameter LD  = 6'b010100;
 parameter ST  = 6'b010101;
 parameter IN  = 6'b010110;
-parameter OUT = 6'b010111;
 
+parameter OUT = 6'b010111;
 parameter JMP = 6'b011000;
+
 parameter LS  = 6'b011001;
 parameter RS  = 6'b011010;
 parameter RSA = 6'b011011;
@@ -65,12 +68,8 @@ parameter JNV = 6'b011101;
 parameter JZ  = 6'b011110;
 parameter JNZ = 6'b011111;
 
-//cprv add_sub = 14 bits
-//A[14:0]+ B[14:0]
-//cfinal add-sub= 15th bit + cprv;
-
-rsa r (ans_rsa, A, B);
-two_c two_com(ans_two_c, B);
+rsa r(ans_rsa, A, B); // Module for right shift arithmetic
+two_c two_com(ans_two_c, B); // Module for generating two's complement
 
 assign ans_tmp = (op_dec == ADD) ? A + B
                : (op_dec == SUB) ? A - B
@@ -99,10 +98,10 @@ assign ans_tmp = (op_dec == ADD) ? A + B
 					: (op_dec == JV) ? ans_ex
 					: (op_dec == JNV) ? ans_ex
 					: (op_dec == JZ) ? ans_ex
-					: (op_dec == JNZ) ? ans_ex : ans_ex;
-
+					: (op_dec == JNZ) ? ans_ex : 16'b0;
+					
 assign overflow = ((op_dec == ADD  || op_dec == ADI ) && (A[15] == B[15]) && (ans_tmp[15] != A[15])) ? 1'b1
-                : ((op_dec == SUB || op_dec== SBI) && (A[15] == ans_two_c) && (ans_tmp[15] != A[15])) ? 1'b1
+                : ((op_dec == SUB || op_dec== SBI) && (A[15] == ans_two_c) && (ans_tmp[15] != A[15])) ? 1'b1 // Separate condition using two's complement of B in case of subtraction 
                 : (~(op_dec == ADD || op_dec == SUB || op_dec == ADI || op_dec == SBI || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b0 : 1'b0;
 
 assign zero = ((ans_tmp == 16'b0) && ~((op_dec == RET) || (op_dec == HLT) 
@@ -111,27 +110,9 @@ assign zero = ((ans_tmp == 16'b0) && ~((op_dec == RET) || (op_dec == HLT)
 
 assign data_out_buff = (op_dec == OUT) ? A : data_out;
 
+// Preserve flags in certain operations
 assign flag_ex[0] = ((op_dec == JV) || (op_dec == JNV) || (op_dec == JZ) ||(op_dec == JNZ))? flag_prv[0] : overflow;
 assign flag_ex[1] = ((op_dec == JV) || (op_dec == JNV) || (op_dec == JZ) ||(op_dec == JNZ))? flag_prv[1] : zero;
-
-//always@(posedge clk)
-//begin
-//	ans_ex = ans_tmp;
-//	flag_prv = flag_ex;
-//	data_out = data_out_buff;
-//	DM_data = B;
-//end
-//
-//always@(reset)
-//begin
-//	if(reset == 1'b0)
-//	begin
-//		flag_prv = 2'b00;
-//		//ans_ex = 16'b0000000000000000;
-//		data_out = 16'b0000000000000000;
-//		DM_data = 16'b0000000000000000;
-//	end
-//end
 
 always@(posedge clk)
 begin
@@ -151,33 +132,6 @@ begin
 	end
 end
 endmodule
-
-//module full_adder(sum, cout, A, B, cin);
-//
-//output sum, cout;
-//input A, B, cin;
-//
-//assign sum = A ^ B ^ cin;
-//assign cout = A & B;
-//
-//endmodule
-//
-//module rca_16bit(s_d, c_b, overflow, A, B, operator);
-//
-//output [15:0] s_d;
-//output c_b, overflow;
-//input [15:0] A, B;
-//input operator;
-//wire [15:0] carryout_tmp, carryin_tmp;
-//
-//assign carryin_tmp[0:15] = {1'b0, carryout_tmp[0:14]};
-//
-//full_adder fa [15:0] (s_d, carry_tmp, A, B, carryin_tmp);
-//
-//assign c_b = carryout_tmp[15];
-//assign overflow = c_b ^ carryout_tmp[14];
-//
-//endmodule
 
 module rsa(ans_rsa, A, B);
 output [15:0] ans_rsa;
