@@ -1,5 +1,5 @@
 ISim log file
-Running: /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/DATA/Xilinx_Projects/MIPS_16bit/execution_block_tb_isim_beh.wdb 
+Running: /media/yashrajkakkad/DATA/SEAS/Semester 3/CO Lab/MIPS_16bit/execution_block_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /media/yashrajkakkad/DATA/SEAS/Semester 3/CO Lab/MIPS_16bit/execution_block_tb_isim_beh.wdb 
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.

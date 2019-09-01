@@ -21,12 +21,12 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.v";
+static const char *ng0 = "/media/yashrajkakkad/DATA/SEAS/Semester 3/CO Lab/MIPS_16bit/execution_block.v";
 static unsigned int ng1[] = {1U, 0U};
 
 
 
-static void Cont_148_0(char *t0)
+static void Cont_146_0(char *t0)
 {
     char t3[8];
     char t15[8];
@@ -65,7 +65,7 @@ LAB0:    t1 = (t0 + 2520U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(148, ng0);
+LAB2:    xsi_set_current_line(146, ng0);
     t2 = (t0 + 1208U);
     t4 = *((char **)t2);
     memset(t3, 0, 8);
@@ -118,7 +118,7 @@ LAB5:    t8 = *((unsigned int *)t3);
 
 }
 
-static void Cont_149_1(char *t0)
+static void Cont_147_1(char *t0)
 {
     char t4[8];
     char *t1;
@@ -153,7 +153,7 @@ LAB0:    t1 = (t0 + 2768U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(149, ng0);
+LAB2:    xsi_set_current_line(147, ng0);
     t2 = (t0 + 1368U);
     t3 = *((char **)t2);
     memset(t4, 0, 8);
@@ -195,7 +195,7 @@ LAB1:    return;
 
 extern void work_m_02696338311019588250_2554965054_init()
 {
-	static char *pe[] = {(void *)Cont_148_0,(void *)Cont_149_1};
+	static char *pe[] = {(void *)Cont_146_0,(void *)Cont_147_1};
 	xsi_register_didat("work_m_02696338311019588250_2554965054", "isim/execution_block_tb_isim_beh.exe.sim/work/m_02696338311019588250_2554965054.didat");
 	xsi_register_executes(pe);
 }

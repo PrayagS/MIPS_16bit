@@ -21,11 +21,11 @@
 #include <malloc.h>
 #define alloca _alloca
 #endif
-static const char *ng0 = "/media/DATA/Xilinx_Projects/MIPS_16bit/execution_block.v";
+static const char *ng0 = "/media/yashrajkakkad/DATA/SEAS/Semester 3/CO Lab/MIPS_16bit/execution_block.v";
 
 
 
-static void Cont_140_0(char *t0)
+static void Cont_138_0(char *t0)
 {
     char t5[8];
     char *t1;
@@ -53,7 +53,7 @@ LAB0:    t1 = (t0 + 2520U);
 
 LAB3:    goto *t2;
 
-LAB2:    xsi_set_current_line(140, ng0);
+LAB2:    xsi_set_current_line(138, ng0);
     t2 = (t0 + 1208U);
     t3 = *((char **)t2);
     t2 = (t0 + 1368U);
@@ -88,7 +88,7 @@ LAB1:    return;
 
 extern void work_m_09118833997356892690_1804892572_init()
 {
-	static char *pe[] = {(void *)Cont_140_0};
+	static char *pe[] = {(void *)Cont_138_0};
 	xsi_register_didat("work_m_09118833997356892690_1804892572", "isim/execution_block_tb_isim_beh.exe.sim/work/m_09118833997356892690_1804892572.didat");
 	xsi_register_executes(pe);
 }

@@ -69,7 +69,7 @@ parameter JZ  = 6'b011110;
 parameter JNZ = 6'b011111;
 
 rsa r(ans_rsa, A, B); // Module for right shift arithmetic
-two_c two_com(ans_two_c, B); // Module for generating two's complement
+two_c two_com(ans_two_c, B); // Module for generating two's complement. It returns its most significant bit
 
 assign ans_tmp = (op_dec == ADD) ? A + B
                : (op_dec == SUB) ? A - B
@@ -101,12 +101,10 @@ assign ans_tmp = (op_dec == ADD) ? A + B
 					: (op_dec == JNZ) ? ans_ex : 16'b0;
 					
 assign overflow = ((op_dec == ADD  || op_dec == ADI ) && (A[15] == B[15]) && (ans_tmp[15] != A[15])) ? 1'b1
-                : ((op_dec == SUB || op_dec== SBI) && (A[15] == ans_two_c) && (ans_tmp[15] != A[15])) ? 1'b1 // Separate condition using two's complement of B in case of subtraction 
-                : (~(op_dec == ADD || op_dec == SUB || op_dec == ADI || op_dec == SBI || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b0 : 1'b0;
+                : ((op_dec == SUB || op_dec== SBI) && (A[15] == ans_two_c) && (ans_tmp[15] != A[15])) ? 1'b1 : 1'b0; // Separate condition using two's complement of B in case of subtraction 
 
 assign zero = ((ans_tmp == 16'b0) && ~((op_dec == RET) || (op_dec == HLT) 
-	|| (op_dec == LD) || (op_dec == ST) || (op_dec == OUT) || (op_dec == JMP) || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b1
-            : ((op_dec == RET) || (op_dec == HLT) ||  (op_dec == LD) || (op_dec == ST) || (op_dec == OUT) || (op_dec == JMP)) ? 1'b0 : 1'b0;
+	|| (op_dec == LD) || (op_dec == ST) || (op_dec == OUT) || (op_dec == JMP) || op_dec == JV || op_dec == JNV || op_dec == JZ || op_dec == JNZ)) ? 1'b1 : 1'b0;
 
 assign data_out_buff = (op_dec == OUT) ? A : data_out;
 
@@ -118,10 +116,10 @@ always@(posedge clk)
 begin
 	if(reset == 1'b0)
 	begin
-		flag_prv = 2'b00;
-		ans_ex = 16'b0000000000000000;
-		data_out = 16'b0000000000000000;
-		DM_data = 16'b0000000000000000;
+		flag_prv = 2'b0;
+		ans_ex = 16'b0;
+		data_out = 16'b0;
+		DM_data = 16'b0;
 	end
 	else
 	begin
@@ -135,7 +133,7 @@ endmodule
 
 module rsa(ans_rsa, A, B);
 output [15:0] ans_rsa;
-input signed [15:0] A;
+input signed [15:0] A; //Inbuilt RSA works only if the operand is signed
 input [15:0] B;
 assign ans_rsa = A >>> B;
 endmodule
