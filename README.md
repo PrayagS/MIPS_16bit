@@ -15,11 +15,12 @@ The repository contains test bench for every block, as well as for main modules 
 Complete block diagram:
 ![block_diagram](https://github.com/PrayagS/MIPS_16bit/blob/master/block_diagram.png?raw=true)
 
-# Instructions supported
+## Instructions supported
 | Code | Description |
 | ------ | -------- |
 | ADD | Addition |
 | SUB | Subtraction |
+| MUL | Multiplication using Booth's algorithm |
 | MOV | Move |
 | AND | Logical |
 | OR | Logical |
@@ -47,15 +48,16 @@ Complete block diagram:
 | JZ | Jump if zero |
 | JNZ | Jump if not zero |
 
-# Floating-point operations (Work in progress)
+## Floating-point operations (Work in progress)
 floating_point.v contains code for performing floating point addition. Numbers are represented using IEEE-754 standard. The code works so far only for addition of positive numbers.
 
-# Cache: Direct mapping scheme
+## Cache: Direct mapping scheme
 We use the following scheme:
 ![cache_structure](https://github.com/PrayagS/MIPS_16bit/blob/master/cache_structure.png?raw=true) 
 
 Following is the block diagram of the implementation:
 ![cache_diagram](https://github.com/PrayagS/MIPS_16bit/blob/master/cache_diagram.png?raw=true)
-# Regarding memory blocks
+
+## Regarding memory blocks
 The project was made in Xilinx ISE 14.7. 'Program Memory' and 'Data Memory' blocks use modules called 'PMem' and 'DMem' respectively which were essentially Xilinx memory blocks generated using IPCore. 
 
