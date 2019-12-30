@@ -53,10 +53,16 @@ floating_point.v contains code for performing floating point addition. Numbers a
 
 ## Cache: Direct mapping scheme
 We use the following scheme:
-![cache_structure](https://github.com/PrayagS/MIPS_16bit/blob/master/cache_structure.png?raw=true) 
+
+<h3 align="center">
+  <img src="https://github.com/PrayagS/MIPS_16bit/blob/master/cache_structure.png?raw=true">
+</h3>
 
 Following is the block diagram of the implementation:
-![cache_diagram](https://github.com/PrayagS/MIPS_16bit/blob/master/cache_diagram.png?raw=true)
+
+<h3 align="center">
+  <img src="https://github.com/PrayagS/MIPS_16bit/blob/master/cache_diagram.png?raw=true" width="600">
+</h3>
 
 ## Regarding memory blocks
 The project was made in Xilinx ISE 14.7. 'Program Memory' and 'Data Memory' blocks use modules called 'PMem' and 'DMem' respectively which were essentially Xilinx memory blocks generated using IPCore. 
